@@ -1,0 +1,1946 @@
+Prefix: bibo: <http://purl.org/ontology/bibo/>
+Prefix: cw: <http://schema.org/CreativeWork>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: foaf: <http://xmlns.com/foaf/0.1/>
+Prefix: geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: schema: <http://schema.org/>
+Prefix: sioc: <http://rdfs.org/sioc/types#>
+Prefix: void: <http://rdfs.org/ns/void#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xs: <http://www.w3.org/TR/xmlschema11-2/#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: 
+
+AnnotationProperty: dcterms:creator
+
+    
+AnnotationProperty: dcterms:title
+
+    
+AnnotationProperty: foaf:mbox
+
+    
+AnnotationProperty: foaf:name
+
+    
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://vocab.afel-project.eu/DOI>
+
+    Annotations: 
+        rdfs:label "DOI"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Journal>,
+        <http://vocab.afel-project.eu/Thesis>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/ISBN>
+
+    Annotations: 
+        rdfs:label "ISBN"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Book>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/URL>
+
+    Annotations: 
+        rdfs:label "URL"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/abstract>
+
+    Annotations: 
+        rdfs:label "Abstract"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Journal>,
+        <http://vocab.afel-project.eu/Thesis>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/allowedActions>
+
+    Annotations: 
+        rdfs:label "Allowed Actions"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Event>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/alumno>
+
+    Annotations: 
+        rdfs:label "Revenue"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/EducationalOrganization>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/answer>
+
+    Annotations: 
+        rdfs:label "Answer"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/StackOverflowPost>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Comment>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/artifact>
+
+    Annotations: 
+        rdfs:label "Artifact"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/ArtifactVisit>,
+        <http://vocab.afel-project.eu/Conference>,
+        <http://vocab.afel-project.eu/Course>,
+        <http://vocab.afel-project.eu/UserActivity>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/artifactReferer>
+
+    Annotations: 
+        rdfs:label "Artifact Referer"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/ArtifactVisit>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/avatar>
+
+    Annotations: 
+        rdfs:label "User Avatar"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Image>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/bias>
+
+    Annotations: 
+        rdfs:label "Artifact Bias"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/comment>
+
+    Annotations: 
+        rdfs:label "Comment",
+        rdfs:label "Wiki Page Comment"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/BlogPost>,
+        <http://vocab.afel-project.eu/Image>,
+        <http://vocab.afel-project.eu/SlidePresentation>,
+        <http://vocab.afel-project.eu/Video>,
+        <http://vocab.afel-project.eu/WikiPage>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Comment>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/complexityLevel>
+
+    Annotations: 
+        rdfs:label "Allowed Actions"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/conferenceURL>
+
+    Annotations: 
+        rdfs:label "Conference URL"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Conference>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/content>
+
+    Annotations: 
+        rdfs:label "Content"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/contributor>
+
+    Annotations: 
+        rdfs:label "Contributor"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Organization> or <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/creator>
+
+    Annotations: 
+        rdfs:label "Creator"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Organization> or <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/date>
+
+    Annotations: 
+        rdfs:label "Date Created"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:date>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/dateOfBirth>
+
+    Annotations: 
+        rdfs:label "Date of Birth"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:date>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/degreeRequirement>
+
+    Annotations: 
+        rdfs:label "Degree Requirement"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Course>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/downVotes>
+
+    Annotations: 
+        rdfs:label "Down Votes"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/RedditPost>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/education>
+
+    Annotations: 
+        rdfs:label "Education"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/email>
+
+    Annotations: 
+        rdfs:label "E-mail",
+        rdfs:label "Mailing List"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/MailingList>,
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/ethnicity>
+
+    Annotations: 
+        rdfs:label "Ethnicity"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/eventAgent>
+
+    Annotations: 
+        rdfs:label "Event Agent"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Event>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Organization> or <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/eventEndDate>
+
+    Annotations: 
+        rdfs:label "Event End Date"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Event>
+    
+    Range: 
+        <xsd:date>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/eventID>
+
+    Annotations: 
+        rdfs:label "Event ID"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Event>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/eventParticipants>
+
+    Annotations: 
+        rdfs:label "Event Participants"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Event>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Organization> or <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/eventStartDate>
+
+    Annotations: 
+        rdfs:label "Event Start Date"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Event>
+    
+    Range: 
+        <xsd:date>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/executiveMembers>
+
+    Annotations: 
+        rdfs:label "Executive Members"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/favorites>
+
+    Annotations: 
+        rdfs:label "Favorites"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/TwitterPost>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/fieldsOfExpertise>
+
+    Annotations: 
+        rdfs:label "Field Of Expertise"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/firstName>
+
+    Annotations: 
+        rdfs:label "First Name"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/format>
+
+    Annotations: 
+        rdfs:label "Content Format"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/foundedBy>
+
+    Annotations: 
+        rdfs:label "Founded By"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/foundedIn>
+
+    Annotations: 
+        rdfs:label "Founded In"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/foundedOn>
+
+    Annotations: 
+        rdfs:label "Founded On"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <xsd:date>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/gender>
+
+    Annotations: 
+        rdfs:label "Gender"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/genre>
+
+    Annotations: 
+        rdfs:label "Genre"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Book>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/hasArtifact>
+
+    Annotations: 
+        rdfs:label "Has Artifact"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/hasReaction>
+
+    Annotations: 
+        rdfs:label "Has Reaction",
+        rdfs:comment "Valid reactions include {love, sad, wow, haha, angry, like}."
+    
+    Domain: 
+        <http://vocab.afel-project.eu/FacebookPost>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/hasReply>
+
+    Annotations: 
+        rdfs:label "Has Reply"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    Range: 
+        <xsd:boolean>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/hobbies>
+
+    Annotations: 
+        rdfs:label "Hobbies"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/hostingPlatform>
+
+    Annotations: 
+        rdfs:comment "A hosting platform can be for example SlideShare for a slideset, Facebook for a Facebook post etc.",
+        rdfs:label "Hosting Platform"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/id>
+
+    Annotations: 
+        rdfs:label "ID"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:integer>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/interests>
+
+    Annotations: 
+        rdfs:label "Interests"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/isDeletion>
+
+    Annotations: 
+        rdfs:label "Is Wiki Page Deletion"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/WikiPage>
+    
+    Range: 
+        <xsd:boolean>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/isMinor>
+
+    Annotations: 
+        rdfs:label "Is Wiki Page Minor Revision"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/WikiPage>
+    
+    Range: 
+        <xsd:boolean>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/isProtected>
+
+    Annotations: 
+        rdfs:label "Is Wiki Page Protected"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/WikiPage>
+    
+    Range: 
+        <xsd:boolean>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/isReply>
+
+    Annotations: 
+        rdfs:label "Is Reply",
+        rdfs:label "Is Reply to MailingList"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/MailingList>,
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    Range: 
+        <xsd:boolean>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/keyboardEvent>
+
+    Annotations: 
+        rdfs:label "Keyboard Event"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/UserActivity>
+    
+    Range: 
+        <http://vocab.afel-project.eu/KeyboardEvent>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/language>
+
+    Annotations: 
+        rdfs:label "Language"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/lastName>
+
+    Annotations: 
+        rdfs:label "Last Name"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/learner>
+
+    Annotations: 
+        rdfs:label "Learner"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Course>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/length>
+
+    Annotations: 
+        rdfs:label "Length",
+        rdfs:comment "The length in seconds"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Video>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/license>
+
+    Annotations: 
+        rdfs:label "Content"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/locatedIn>
+
+    Annotations: 
+        rdfs:label "Located In",
+        rdfs:label "ID"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>,
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/maritalStatus>
+
+    Annotations: 
+        rdfs:label "Marital Status"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/members>
+
+    Annotations: 
+        rdfs:label "Members"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/mentions>
+
+    Annotations: 
+        rdfs:label "Mentions",
+        rdfs:comment "Mentions like in Twitter or Facebook tagging."
+    
+    Domain: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/middleName>
+
+    Annotations: 
+        rdfs:label "Middle Name"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/motherTongue>
+
+    Annotations: 
+        rdfs:label "Mother Tongue"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/mouseEvent>
+
+    Annotations: 
+        rdfs:label "Mouse Event"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/UserActivity>
+    
+    Range: 
+        <http://vocab.afel-project.eu/MouseEvent>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/nationality>
+
+    Annotations: 
+        rdfs:label "ID"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/numPages>
+
+    Annotations: 
+        rdfs:label "Number of Pages"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Book>,
+        <http://vocab.afel-project.eu/Journal>,
+        <http://vocab.afel-project.eu/Thesis>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/numSlides>
+
+    Annotations: 
+        rdfs:label "Number of Slides"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/SlidePresentation>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/occupation>
+
+    Annotations: 
+        rdfs:label "Occupation"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/operatingLocations>
+
+    Annotations: 
+        rdfs:label "Operating Locations"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Organziation>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/outLinks>
+
+    Annotations: 
+        rdfs:label "Outgoing Links"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/person>
+
+    Annotations: 
+        rdfs:label "Person"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/platform>
+
+    Annotations: 
+        rdfs:label "Registration Platform"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/politicalOrientation>
+
+    Annotations: 
+        rdfs:label "Political Orientation"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/prerequisite>
+
+    Annotations: 
+        rdfs:label "Artifact Prerequisites"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/previousRevision>
+
+    Annotations: 
+        rdfs:label "Previous Revision"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/products>
+
+    Annotations: 
+        rdfs:label "Products"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Corporation>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/professionalExperience>
+
+    Annotations: 
+        rdfs:label "Professional Experience"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/profit>
+
+    Annotations: 
+        rdfs:label "Profit"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Corporation>
+    
+    Range: 
+        <xsd:double>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/publisher>
+
+    Annotations: 
+        rdfs:label "Publisher"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/qualityScore>
+
+    Annotations: 
+        rdfs:label "Quality Score"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/recommendedForCourse>
+
+    Annotations: 
+        rdfs:label "Recommended for Course"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Book>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Course>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/recommendedForTopic>
+
+    Annotations: 
+        rdfs:label "Recommended for Course"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Book>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/relatedArtifacts>
+
+    Annotations: 
+        rdfs:label "Related Artifacts"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/religion>
+
+    Annotations: 
+        rdfs:label "Religion"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/reply>
+
+    Annotations: 
+        rdfs:label "Reply"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/RedditPost>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Comment>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/replyToEmail>
+
+    Annotations: 
+        rdfs:label "Reply Email"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/MailingList>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/resourceID>
+
+    Annotations: 
+        rdfs:label "Resource Identifier"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:integer>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/retweets>
+
+    Annotations: 
+        rdfs:label "Retweets"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/TwitterPost>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/revenue>
+
+    Annotations: 
+        rdfs:label "Revenue"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Corporation>
+    
+    Range: 
+        <xsd:double>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/revisionNumber>
+
+    Annotations: 
+        rdfs:label "Revision Number"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:long>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/role>
+
+    Annotations: 
+        rdfs:label "Role",
+        rdfs:comment "These are the possible roles, like tutor, learner etc."
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/scientificDegree>
+
+    Annotations: 
+        rdfs:label "Scientific Degree"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Thesis>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/section>
+
+    Annotations: 
+        rdfs:label "Wiki Page Section"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/WikiPage>
+    
+    Range: 
+        <http://vocab.afel-project.eu/WikiPage>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/sexualOrientation>
+
+    Annotations: 
+        rdfs:label "Sexual Orientation"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/size>
+
+    Annotations: 
+        rdfs:label "Artifact Size"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:integer>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/skills>
+
+    Annotations: 
+        rdfs:label "Skills"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/socialNetworkPost>
+
+    Annotations: 
+        rdfs:label "Activity User"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/UserReply>
+    
+    Range: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/socialStatus>
+
+    Annotations: 
+        rdfs:label "Social Status"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/spokenLanguages>
+
+    Annotations: 
+        rdfs:label "Spoken Languages"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Person>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/tag>
+
+    Annotations: 
+        rdfs:label "Tag"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/targetAudience>
+
+    Annotations: 
+        rdfs:label "Target Audience"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <http://vocab.afel-project.eu/Course>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/topic>
+
+    Annotations: 
+        rdfs:label "Content Topic"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Artifact>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/tutor>
+
+    Annotations: 
+        rdfs:label "Tutor"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/Course>
+    
+    Range: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/upVotes>
+
+    Annotations: 
+        rdfs:label "Up Votes"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/RedditPost>
+    
+    Range: 
+        <xsd:int>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/user>
+
+    Annotations: 
+        rdfs:label "Activity User"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/UserActivity>
+    
+    Range: 
+        <http://vocab.afel-project.eu/User>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/userActivity>
+
+    Annotations: 
+        rdfs:label "User Activity"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <http://vocab.afel-project.eu/UserActivity>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/userID>
+
+    Annotations: 
+        rdfs:label "User ID"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/userName>
+
+    Annotations: 
+        rdfs:label "User Name"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <xsd:String>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/userNetwork>
+
+    Annotations: 
+        rdfs:label "User Network"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/User>
+    
+    Range: 
+        <http://vocab.afel-project.eu/User>
+    
+    
+ObjectProperty: <http://vocab.afel-project.eu/votes>
+
+    Annotations: 
+        rdfs:label "Votes"
+    
+    Domain: 
+        <http://vocab.afel-project.eu/StackOverflowPost>
+    
+    Range: 
+        <xsd:int>
+    
+    
+Class: <bibo:SlideShow>
+
+    
+Class: <http://vocab.afel-project.eu/Artifact>
+
+    Annotations: 
+        rdfs:label "Artifact"
+    
+    SubClassOf: 
+        <schema:CreativeWork>
+    
+    
+Class: <http://vocab.afel-project.eu/ArtifactPlay>
+
+    Annotations: 
+        rdfs:label "Artifact Play"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/ArtifactVisit>,
+        <schema:WatchAction>
+    
+    
+Class: <http://vocab.afel-project.eu/ArtifactView>
+
+    Annotations: 
+        rdfs:label "Artifact View"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/ArtifactVisit>,
+        <schema:ViewAction>
+    
+    
+Class: <http://vocab.afel-project.eu/ArtifactVisit>
+
+    Annotations: 
+        rdfs:label "Artifact Visit"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/UserActivity>,
+        <schema:ConsumeAction>
+    
+    
+Class: <http://vocab.afel-project.eu/BlogPost>
+
+    Annotations: 
+        rdfs:label "Blog Posting"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:BlogPosting>
+    
+    
+Class: <http://vocab.afel-project.eu/Book>
+
+    Annotations: 
+        rdfs:label "Book"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:Book>
+    
+    
+Class: <http://vocab.afel-project.eu/Comment>
+
+    Annotations: 
+        rdfs:label "Comment"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:Comment>
+    
+    
+Class: <http://vocab.afel-project.eu/Conference>
+
+    Annotations: 
+        rdfs:label "Conference"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>,
+        <schema:BusinessEvent>
+    
+    
+Class: <http://vocab.afel-project.eu/Corporation>
+
+    Annotations: 
+        rdfs:label "Corporation"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Organization>,
+        <schema:Corporation>
+    
+    
+Class: <http://vocab.afel-project.eu/Course>
+
+    Annotations: 
+        rdfs:label "Course"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>,
+        <schema:CourseInstance>
+    
+    
+Class: <http://vocab.afel-project.eu/Dataset>
+
+    Annotations: 
+        rdfs:label "Dataset"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:Dataset>
+    
+    
+Class: <http://vocab.afel-project.eu/EducationalOrganization>
+
+    Annotations: 
+        rdfs:label "Comment"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Organization>,
+        <schema:EducationalOrganization>
+    
+    
+Class: <http://vocab.afel-project.eu/Event>
+
+    Annotations: 
+        rdfs:label "Event"
+    
+    SubClassOf: 
+        <schema:Event>
+    
+    
+Class: <http://vocab.afel-project.eu/FacebookPost>
+
+    Annotations: 
+        rdfs:label "Facebook Post"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    
+Class: <http://vocab.afel-project.eu/Forum>
+
+    Annotations: 
+        rdfs:label "Forum"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <sioc:Forum>
+    
+    
+Class: <http://vocab.afel-project.eu/Image>
+
+    Annotations: 
+        rdfs:label "Image Resource"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:ImageObject>
+    
+    
+Class: <http://vocab.afel-project.eu/Journal>
+
+    Annotations: 
+        rdfs:label "Journal"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:ScholaryArticle>
+    
+    
+Class: <http://vocab.afel-project.eu/KeyPress>
+
+    Annotations: 
+        rdfs:label "Key Press"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/KeyboardEvent>
+    
+    
+Class: <http://vocab.afel-project.eu/KeyboardEvent>
+
+    Annotations: 
+        rdfs:label "Keyboard Event"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>
+    
+    
+Class: <http://vocab.afel-project.eu/Learner>
+
+    Annotations: 
+        rdfs:label "Person"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+Class: <http://vocab.afel-project.eu/LearningActivity>
+
+    Annotations: 
+        rdfs:label "Learning Activity"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>,
+        <schema:EducationalEvent>
+    
+    
+Class: <http://vocab.afel-project.eu/LinkedInPost>
+
+    Annotations: 
+        rdfs:label "LinkedIn Post"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    
+Class: <http://vocab.afel-project.eu/MailingList>
+
+    Annotations: 
+        rdfs:label "Mailing List"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <sioc:MailingList>
+    
+    
+Class: <http://vocab.afel-project.eu/MouseClick>
+
+    Annotations: 
+        rdfs:label "Mouse Click"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/MouseEvent>
+    
+    
+Class: <http://vocab.afel-project.eu/MouseEvent>
+
+    Annotations: 
+        rdfs:label "Mouse Event"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>
+    
+    
+Class: <http://vocab.afel-project.eu/MouseScroll>
+
+    Annotations: 
+        rdfs:label "Mouse Scroll"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/MouseEvent>
+    
+    
+Class: <http://vocab.afel-project.eu/MouseTransition>
+
+    Annotations: 
+        rdfs:label "Mouse Transition"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/MouseEvent>
+    
+    
+Class: <http://vocab.afel-project.eu/NewsArticle>
+
+    Annotations: 
+        rdfs:label "News Article"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:Article>
+    
+    
+Class: <http://vocab.afel-project.eu/Organization>
+
+    Annotations: 
+        rdfs:label "Organization"
+    
+    SubClassOf: 
+        <schema:Organization>
+    
+    
+Class: <http://vocab.afel-project.eu/Organziation>
+
+    
+Class: <http://vocab.afel-project.eu/Person>
+
+    Annotations: 
+        rdfs:label "Person"
+    
+    SubClassOf: 
+        <schema:Person>
+    
+    
+Class: <http://vocab.afel-project.eu/Poll>
+
+    Annotations: 
+        rdfs:label "Image Resource"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <sioc:Poll>
+    
+    
+Class: <http://vocab.afel-project.eu/RedditPost>
+
+    Annotations: 
+        rdfs:label "Reddit Post"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    
+Class: <http://vocab.afel-project.eu/SlidePresentation>
+
+    Annotations: 
+        rdfs:label "Slide Presentation"
+    
+    SubClassOf: 
+        <bibo:SlideShow>,
+        <http://vocab.afel-project.eu/Artifact>
+    
+    
+Class: <http://vocab.afel-project.eu/SocialNetworkPost>
+
+    Annotations: 
+        rdfs:label "Social Media Post"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:SocialMediaPosting>
+    
+    
+Class: <http://vocab.afel-project.eu/SoftwareApplication>
+
+    Annotations: 
+        rdfs:label "Software Application"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:SoftwareApplication>
+    
+    
+Class: <http://vocab.afel-project.eu/StackOverflowPost>
+
+    Annotations: 
+        rdfs:label "StackOverflow Post"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    
+Class: <http://vocab.afel-project.eu/Thesis>
+
+    Annotations: 
+        rdfs:label "Thesis"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:Thesis>
+    
+    
+Class: <http://vocab.afel-project.eu/Tutor>
+
+    Annotations: 
+        rdfs:label "Person"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+Class: <http://vocab.afel-project.eu/TwitterPost>
+
+    Annotations: 
+        rdfs:label "Twitter Post"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/SocialNetworkPost>
+    
+    
+Class: <http://vocab.afel-project.eu/User>
+
+    Annotations: 
+        rdfs:label "Person"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Person>
+    
+    
+Class: <http://vocab.afel-project.eu/UserActivity>
+
+    Annotations: 
+        rdfs:label "User Activity"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>,
+        <schema:Action>
+    
+    
+Class: <http://vocab.afel-project.eu/UserLike>
+
+    Annotations: 
+        rdfs:label "User Like"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/UserActivity>,
+        <schema:LikeAction>
+    
+    
+Class: <http://vocab.afel-project.eu/UserReply>
+
+    Annotations: 
+        rdfs:label "User Reply"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Event>,
+        <schema:ReplyAction>
+    
+    
+Class: <http://vocab.afel-project.eu/Video>
+
+    Annotations: 
+        rdfs:label "Video Resource"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:VideoObject>
+    
+    
+Class: <http://vocab.afel-project.eu/WebResource>
+
+    Annotations: 
+        rdfs:label "Web Page"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <schema:WebPage>
+    
+    
+Class: <http://vocab.afel-project.eu/WikiPage>
+
+    Annotations: 
+        rdfs:label "Wiki Page"
+    
+    SubClassOf: 
+        <http://vocab.afel-project.eu/Artifact>,
+        <sioc:WikiArticle>
+    
+    
+Class: <schema:Action>
+
+    
+Class: <schema:Article>
+
+    
+Class: <schema:BlogPosting>
+
+    
+Class: <schema:Book>
+
+    
+Class: <schema:BusinessEvent>
+
+    
+Class: <schema:Comment>
+
+    
+Class: <schema:ConsumeAction>
+
+    
+Class: <schema:Corporation>
+
+    
+Class: <schema:CourseInstance>
+
+    
+Class: <schema:CreativeWork>
+
+    
+Class: <schema:Dataset>
+
+    
+Class: <schema:EducationalEvent>
+
+    
+Class: <schema:EducationalOrganization>
+
+    
+Class: <schema:Event>
+
+    
+Class: <schema:ImageObject>
+
+    
+Class: <schema:LikeAction>
+
+    
+Class: <schema:Organization>
+
+    
+Class: <schema:Person>
+
+    
+Class: <schema:ReplyAction>
+
+    
+Class: <schema:ScholaryArticle>
+
+    
+Class: <schema:SocialMediaPosting>
+
+    
+Class: <schema:SoftwareApplication>
+
+    
+Class: <schema:Thesis>
+
+    
+Class: <schema:VideoObject>
+
+    
+Class: <schema:ViewAction>
+
+    
+Class: <schema:WatchAction>
+
+    
+Class: <schema:WebPage>
+
+    
+Class: <sioc:Forum>
+
+    
+Class: <sioc:MailingList>
+
+    
+Class: <sioc:Poll>
+
+    
+Class: <sioc:WikiArticle>
+
+    
+Class: <xsd:String>
+
+    
+Class: <xsd:boolean>
+
+    
+Class: <xsd:date>
+
+    
+Class: <xsd:double>
+
+    
+Class: <xsd:int>
+
+    
+Class: <xsd:integer>
+
+    
+Class: <xsd:long>
+
+    
+Individual: _:genid14
+
+    Annotations: 
+        foaf:name "AFEL Project",
+        foaf:mbox "afel@l3s.de"
+    
+    

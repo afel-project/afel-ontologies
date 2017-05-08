@@ -1,0 +1,4 @@
+*.DS_Store
+
+# Protege
+catalog-v*.xml
