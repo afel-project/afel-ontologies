@@ -1,0 +1,134 @@
+Prefix: afel: <http://vocab.afel-project.eu/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://vocab.afel-project.eu/ont/learning>
+<http://vocab.afel-project.eu/ont/learning/1.0.0>
+
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:seeAlso
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: afel:isTriggeredBy
+
+    InverseOf: 
+        afel:triggers
+    
+    
+ObjectProperty: afel:triggers
+
+    Range: 
+        afel:Process
+    
+    InverseOf: 
+        afel:isTriggeredBy
+    
+    
+DataProperty: <http://purl.org/dc/terms/title>
+
+    
+Class: <http://rdfs.org/sioc/ns#Community>
+
+    
+Class: <http://schema.org/Action>
+
+    
+Class: <http://xmlns.com/foaf/0.1/Document>
+
+    
+Class: afel:LearningActivity
+
+    Annotations: 
+        rdfs:comment "All activities – intentional or not and conscious or not – that can lead to encounters that can trigger learning processes"@en,
+        rdfs:isDefinedBy <https://laglossary.github.io>,
+        rdfs:seeAlso "https://laglossary.github.io/#learning_activity"@en,
+        rdfs:label "learning activity"@en
+    
+    
+Class: afel:LearningCommunity
+
+    Annotations: 
+        rdfs:label "learning community"@en
+    
+    SubClassOf: 
+        <http://rdfs.org/sioc/ns#Community>
+    
+    
+Class: afel:LearningProcess
+
+    Annotations: 
+        rdfs:label "learning process"@en
+    
+    SubClassOf: 
+        afel:Process
+    
+    
+Class: afel:LearningScope
+
+    Annotations: 
+        rdfs:label "learning scope"@en,
+        rdfs:isDefinedBy "https://laglossary.github.io/#learning_scope"@en
+    
+    DisjointWith: 
+        afel:LearningTrajectory
+    
+    
+Class: afel:LearningTrajectory
+
+    Annotations: 
+        rdfs:seeAlso "https://laglossary.github.io/#learning_trajectory"@en,
+        rdfs:comment "A learning trajectory comprises “… the learning goal, the learning activities, and the thinking and learning in which the students might engage” (Martin Simon, 1995, p. 133) = what happens inside and outside the head: sum of all interactions and the processes that are triggered by these interactions."@en,
+        rdfs:label "learning trajectory"@en,
+        rdfs:isDefinedBy <https://laglossary.github.io>
+    
+    DisjointWith: 
+        afel:LearningScope
+    
+    
+Class: afel:Process
+
+    
+Class: afel:UserArtifactInteraction
+
+    Annotations: 
+        rdfs:comment "An action involving a learner and an artifact, potentially resulting in an occurrence of knowledge construction"@en,
+        rdfs:label "user-artifact interaction"@en
+    
+    SubClassOf: 
+        <http://schema.org/Action>
+    
+    
+Individual: <https://laglossary.github.io>
+
+    Types: 
+        <http://xmlns.com/foaf/0.1/Document>
+    
+    Facts:  
+     <http://purl.org/dc/terms/title>  "The Learning Analytics Glossary"^^xsd:string
+    
+    
+DisjointClasses: 
+    <http://rdfs.org/sioc/ns#Community>,<http://schema.org/Action>,afel:LearningActivity,afel:LearningProcess,afel:LearningScope,afel:LearningTrajectory,<http://xmlns.com/foaf/0.1/Document>
+
+DisjointClasses: 
+    afel:LearningActivity,afel:LearningCommunity,afel:LearningTrajectory
+
