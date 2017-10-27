@@ -1,4 +1,5 @@
 Prefix: afel: <http://vocab.afel-project.eu/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -28,14 +29,86 @@ Datatype: rdf:PlainLiteral
 Datatype: xsd:string
 
     
+ObjectProperty: <http://purl.org/dc/terms/hasPart>
+
+    
+ObjectProperty: afel:hasScope
+
+    Annotations: 
+        rdfs:label "has scope"@en
+    
+    InverseOf: 
+        afel:isScopeOf
+    
+    
+ObjectProperty: afel:hosts
+
+    Annotations: 
+        rdfs:label "hosts"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        afel:isHostedOn
+    
+    
+ObjectProperty: afel:includesActivity
+
+    Range: 
+        afel:Activity
+    
+    
+ObjectProperty: afel:involvesUseOf
+
+    InverseOf: 
+        afel:isUsedIn
+    
+    
+ObjectProperty: afel:isHostedOn
+
+    Annotations: 
+        rdfs:label "is hosted on"@en
+    
+    InverseOf: 
+        afel:hosts
+    
+    
+ObjectProperty: afel:isScopeOf
+
+    Annotations: 
+        rdfs:label "is scope of"@en
+    
+    InverseOf: 
+        afel:hasScope
+    
+    
 ObjectProperty: afel:isTriggeredBy
 
+    Annotations: 
+        rdfs:label "is triggered by"@en
+    
     InverseOf: 
         afel:triggers
     
     
+ObjectProperty: afel:isUsedIn
+
+    Domain: 
+        afel:Artifact
+    
+    Range: 
+        afel:Activity
+    
+    InverseOf: 
+        afel:involvesUseOf
+    
+    
 ObjectProperty: afel:triggers
 
+    Annotations: 
+        rdfs:label "triggers"@en
+    
     Range: 
         afel:Process
     
@@ -43,16 +116,35 @@ ObjectProperty: afel:triggers
         afel:isTriggeredBy
     
     
+ObjectProperty: owl:topObjectProperty
+
+    
 DataProperty: <http://purl.org/dc/terms/title>
 
     
-Class: <http://rdfs.org/sioc/ns#Community>
+Class: <http://rdfs.org/sioc/ns#Space>
 
     
 Class: <http://schema.org/Action>
 
     
 Class: <http://xmlns.com/foaf/0.1/Document>
+
+    
+Class: afel:Activity
+
+    Annotations: 
+        rdfs:label "activity"@en
+    
+    
+Class: afel:ActivitySet
+
+    SubClassOf: 
+        <http://purl.org/dc/terms/hasPart> some afel:Activity,
+        <http://purl.org/dc/terms/hasPart> only afel:Activity
+    
+    
+Class: afel:Artifact
 
     
 Class: afel:LearningActivity
@@ -63,14 +155,26 @@ Class: afel:LearningActivity
         rdfs:seeAlso "https://laglossary.github.io/#learning_activity"@en,
         rdfs:label "learning activity"@en
     
-    
-Class: afel:LearningCommunity
-
-    Annotations: 
-        rdfs:label "learning community"@en
+    EquivalentTo: 
+        afel:Activity
+         and (afel:hasScope some afel:LearningScope)
     
     SubClassOf: 
-        <http://rdfs.org/sioc/ns#Community>
+        afel:Activity
+    
+    
+Class: afel:LearningPath
+
+    Annotations: 
+        rdfs:isDefinedBy <https://laglossary.github.io>,
+        rdfs:seeAlso "https://laglossary.github.io/#learning_trajectory"@en,
+        rdfs:label "learning path"@en,
+        rdfs:comment "A learning trajectory comprises “… the learning goal, the learning activities, and the thinking and learning in which the students might engage” (Martin Simon, 1995, p. 133) = what happens inside and outside the head: sum of all interactions and the processes that are triggered by these interactions."@en
+    
+    EquivalentTo: 
+        afel:ActivitySet
+         and (afel:hasScope some afel:LearningScope)
+         and (afel:includesActivity only afel:LearningActivity)
     
     
 Class: afel:LearningProcess
@@ -86,22 +190,11 @@ Class: afel:LearningScope
 
     Annotations: 
         rdfs:label "learning scope"@en,
+        rdfs:comment "A Learning Scope is a Scope (which is an atomic concept that might be specialised differently depending on the context) that is the scope of a Learning Trajectory. For that reason it does not specialise any class."@en,
         rdfs:isDefinedBy "https://laglossary.github.io/#learning_scope"@en
     
-    DisjointWith: 
-        afel:LearningTrajectory
-    
-    
-Class: afel:LearningTrajectory
-
-    Annotations: 
-        rdfs:seeAlso "https://laglossary.github.io/#learning_trajectory"@en,
-        rdfs:comment "A learning trajectory comprises “… the learning goal, the learning activities, and the thinking and learning in which the students might engage” (Martin Simon, 1995, p. 133) = what happens inside and outside the head: sum of all interactions and the processes that are triggered by these interactions."@en,
-        rdfs:label "learning trajectory"@en,
-        rdfs:isDefinedBy <https://laglossary.github.io>
-    
-    DisjointWith: 
-        afel:LearningScope
+    EquivalentTo: 
+        afel:isScopeOf some afel:LearningPath
     
     
 Class: afel:Process
@@ -127,8 +220,5 @@ Individual: <https://laglossary.github.io>
     
     
 DisjointClasses: 
-    <http://rdfs.org/sioc/ns#Community>,<http://schema.org/Action>,afel:LearningActivity,afel:LearningProcess,afel:LearningScope,afel:LearningTrajectory,<http://xmlns.com/foaf/0.1/Document>
-
-DisjointClasses: 
-    afel:LearningActivity,afel:LearningCommunity,afel:LearningTrajectory
+    <http://rdfs.org/sioc/ns#Space>,<http://schema.org/Action>,afel:Activity,afel:ActivitySet,afel:Artifact,afel:Process,<http://xmlns.com/foaf/0.1/Document>
 

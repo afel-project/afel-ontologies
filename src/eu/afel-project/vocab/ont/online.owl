@@ -1,0 +1,101 @@
+Prefix: afel: <http://vocab.afel-project.eu/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://vocab.afel-project.eu/ont/online>
+<http://vocab.afel-project.eu/ont/online/1.0.0>
+Import: <http://vocab.afel-project.eu/ont/learning/1.0.0>
+
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:seeAlso
+
+    
+Datatype: <http://schema.org/URL>
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: afel:involvesUseOf
+
+    
+ObjectProperty: afel:isHostedOn
+
+    
+DataProperty: afel:URL
+
+    Range: 
+        <http://schema.org/URL>
+    
+    
+Class: <http://rdfs.org/sioc/ns#Community>
+
+    
+Class: <http://rdfs.org/sioc/ns#Space>
+
+    
+Class: afel:Activity
+
+    
+Class: afel:Artifact
+
+    
+Class: afel:BrowsingActivity
+
+    Annotations: 
+        rdfs:comment "A BrowsingActivity is an activity that uses an online resource (to simplify). An OnlineResource is defined as a resource that is accessible through a URL."@en,
+        rdfs:seeAlso "https://laglossary.github.io/#learning_activity"@en,
+        rdfs:isDefinedBy <https://laglossary.github.io>,
+        rdfs:label "browsing activity"@en
+    
+    EquivalentTo: 
+        afel:Activity
+         and (afel:involvesUseOf some afel:OnlineResource)
+    
+    SubClassOf: 
+        afel:Activity
+    
+    
+Class: afel:LearningCommunity
+
+    Annotations: 
+        rdfs:label "learning community"@en
+    
+    SubClassOf: 
+        <http://rdfs.org/sioc/ns#Community>
+    
+    
+Class: afel:OnlinePlatform
+
+    Annotations: 
+        rdfs:label "online platform"@en
+    
+    SubClassOf: 
+        <http://rdfs.org/sioc/ns#Space>
+    
+    
+Class: afel:OnlineResource
+
+    Annotations: 
+        rdfs:label "online resource"@en
+    
+    SubClassOf: 
+        afel:Artifact,
+        afel:isHostedOn some afel:OnlinePlatform,
+        afel:URL some <http://schema.org/URL>
+    
+    
