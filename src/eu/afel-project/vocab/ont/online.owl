@@ -48,12 +48,6 @@ Class: <http://rdfs.org/sioc/ns#Community>
 Class: <http://rdfs.org/sioc/ns#Space>
 
     
-Class: afel:Activity
-
-    
-Class: afel:Artifact
-
-    
 Class: afel:BrowsingActivity
 
     Annotations: 
