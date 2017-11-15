@@ -26,6 +26,9 @@ AnnotationProperty: rdfs:seeAlso
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:anyURI
+
+    
 Datatype: xsd:string
 
     
@@ -152,8 +155,8 @@ Class: afel:LearningActivity
     Annotations: 
         rdfs:comment "All activities – intentional or not and conscious or not – that can lead to encounters that can trigger learning processes"@en,
         rdfs:isDefinedBy <https://laglossary.github.io>,
-        rdfs:seeAlso "https://laglossary.github.io/#learning_activity"@en,
-        rdfs:label "learning activity"@en
+        rdfs:label "learning activity"@en,
+        rdfs:seeAlso "https://laglossary.github.io/#learning_activity"^^xsd:anyURI
     
     EquivalentTo: 
         afel:Activity
@@ -167,9 +170,9 @@ Class: afel:LearningPath
 
     Annotations: 
         rdfs:isDefinedBy <https://laglossary.github.io>,
-        rdfs:seeAlso "https://laglossary.github.io/#learning_trajectory"@en,
         rdfs:label "learning path"@en,
-        rdfs:comment "A learning trajectory comprises “… the learning goal, the learning activities, and the thinking and learning in which the students might engage” (Martin Simon, 1995, p. 133) = what happens inside and outside the head: sum of all interactions and the processes that are triggered by these interactions."@en
+        rdfs:comment "A learning trajectory comprises “… the learning goal, the learning activities, and the thinking and learning in which the students might engage” (Martin Simon, 1995, p. 133) = what happens inside and outside the head: sum of all interactions and the processes that are triggered by these interactions."@en,
+        rdfs:seeAlso "https://laglossary.github.io/#learning_trajectory"^^xsd:anyURI
     
     EquivalentTo: 
         afel:ActivitySet
@@ -190,8 +193,9 @@ Class: afel:LearningScope
 
     Annotations: 
         rdfs:label "learning scope"@en,
-        rdfs:comment "A Learning Scope is a Scope (which is an atomic concept that might be specialised differently depending on the context) that is the scope of a Learning Trajectory. For that reason it does not specialise any class."@en,
-        rdfs:isDefinedBy "https://laglossary.github.io/#learning_scope"@en
+        rdfs:seeAlso "https://laglossary.github.io/#learning_scope"^^xsd:anyURI,
+        rdfs:isDefinedBy <https://laglossary.github.io>,
+        rdfs:comment "A Learning Scope is a Scope (which is an atomic concept that might be specialised differently depending on the context) that is the scope of a Learning Trajectory. For that reason it does not specialise any class."@en
     
     EquivalentTo: 
         afel:isScopeOf some afel:LearningPath
@@ -212,12 +216,6 @@ Class: afel:UserArtifactInteraction
     
 Individual: <https://laglossary.github.io>
 
-    Types: 
-        <http://xmlns.com/foaf/0.1/Document>
-    
-    Facts:  
-     <http://purl.org/dc/terms/title>  "The Learning Analytics Glossary"^^xsd:string
-    
     
 DisjointClasses: 
     <http://rdfs.org/sioc/ns#Space>,<http://schema.org/Action>,afel:Activity,afel:ActivitySet,afel:Artifact,afel:Process,<http://xmlns.com/foaf/0.1/Document>
