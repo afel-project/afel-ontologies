@@ -58,6 +58,15 @@ Datatype: xsd:string
 ObjectProperty: <http://purl.org/dc/terms/hasPart>
 
     
+ObjectProperty: <http://vocab.afel-project.eu/ont/learning#isActivityPerformedBy>
+
+    Annotations: 
+        rdfs:label "is an activity performed by"@en
+    
+    InverseOf: 
+        afel:performsActivity
+    
+    
 ObjectProperty: afel:hasScope
 
     Annotations: 
@@ -130,6 +139,21 @@ ObjectProperty: afel:isUsedIn
         afel:involvesUseOf
     
     
+ObjectProperty: afel:performsActivity
+
+    Annotations: 
+        rdfs:label "performs activity"@en
+    
+    Domain: 
+        <http://xmlns.com/foaf/0.1/Agent>
+    
+    Range: 
+        afel:Activity
+    
+    InverseOf: 
+        <http://vocab.afel-project.eu/ont/learning#isActivityPerformedBy>
+    
+    
 ObjectProperty: afel:triggers
 
     Annotations: 
@@ -149,6 +173,9 @@ Class: <http://rdfs.org/sioc/ns#Space>
 
     
 Class: <http://schema.org/Action>
+
+    
+Class: <http://xmlns.com/foaf/0.1/Agent>
 
     
 Class: <http://xmlns.com/foaf/0.1/Document>

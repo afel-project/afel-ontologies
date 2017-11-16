@@ -1,0 +1,31 @@
+Prefix: afel: <http://vocab.afel-project.eu/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://vocab.afel-project.eu/ont/root>
+<http://vocab.afel-project.eu/ont/root/1.0.0>
+Import: <http://vocab.afel-project.eu/ont/learner>
+Import: <http://vocab.afel-project.eu/ont/online>
+
+Annotations: 
+    <http://purl.org/dc/terms/rights> "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0"@en,
+    <http://purl.org/dc/terms/title> "AFEL Learning Ontology: Root module",
+    rdfs:comment "This module can be used to load the entire AFEL ontology network all at once."@en
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/rights>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label

@@ -10,7 +10,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://vocab.afel-project.eu/ont/online>
 <http://vocab.afel-project.eu/ont/online/1.0.0>
-Import: <http://vocab.afel-project.eu/ont/learning/1.0.0>
+Import: <http://vocab.afel-project.eu/ont/learning>
 
 AnnotationProperty: rdfs:comment
 
