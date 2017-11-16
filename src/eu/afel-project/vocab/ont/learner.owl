@@ -10,12 +10,62 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://vocab.afel-project.eu/ont/learner>
 <http://vocab.afel-project.eu/ont/learner/1.0.0>
+Import: <http://vocab.afel-project.eu/ont/learning/1.0.0>
 
+Annotations: 
+    <http://purl.org/dc/terms/description> "Part of the AFEL Learning Ontology that models the role of learners."@en,
+    <http://purl.org/dc/terms/rights> "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0"@en,
+    <http://purl.org/dc/terms/title> "AFEL Learning Ontology: Learner module"
+
+AnnotationProperty: <http://purl.org/dc/terms/description>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/rights>
+
+    Annotations: 
+        <http://purl.org/dc/terms/rights> "\"This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0\""@en
+    
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
 AnnotationProperty: rdfs:comment
 
-
+    
 AnnotationProperty: rdfs:isDefinedBy
 
-
+    
 AnnotationProperty: rdfs:label
 
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole>
+
+    
+Class: <http://vocab.afel-project.eu/ont/learner#Learner>
+
+    Annotations: 
+        rdfs:label "learner"@en
+    
+    SubClassOf: 
+        <http://xmlns.com/foaf/0.1/Agent>,
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> some <http://vocab.afel-project.eu/ont/learner#LearnerRole>
+    
+    
+Class: <http://vocab.afel-project.eu/ont/learner#LearnerRole>
+
+    Annotations: 
+        rdfs:label "learner role"@en
+    
+    SubClassOf: 
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role>
+    
+    
+Class: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role>
+
+    
+Class: <http://xmlns.com/foaf/0.1/Agent>
+
+    

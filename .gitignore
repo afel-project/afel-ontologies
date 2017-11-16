@@ -2,3 +2,6 @@
 
 # Protege
 catalog-v*.xml
+
+# generated files
+target
