@@ -13,18 +13,15 @@ Ontology: <http://vocab.afel-project.eu/ont/learner>
 Import: <http://vocab.afel-project.eu/ont/learning/1.0.0>
 
 Annotations: 
-    <http://purl.org/dc/terms/description> "Part of the AFEL Learning Ontology that models the role of learners."@en,
     <http://purl.org/dc/terms/rights> "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0"@en,
-    <http://purl.org/dc/terms/title> "AFEL Learning Ontology: Learner module"
+    <http://purl.org/dc/terms/title> "AFEL Learning Ontology: Learner module",
+    rdfs:comment "Part of the AFEL Learning Ontology that models the role of learners."@en
 
 AnnotationProperty: <http://purl.org/dc/terms/description>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/rights>
 
-    Annotations: 
-        <http://purl.org/dc/terms/rights> "\"This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0\""@en
-    
     
 AnnotationProperty: <http://purl.org/dc/terms/title>
 

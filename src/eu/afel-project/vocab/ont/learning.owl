@@ -11,6 +11,29 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://vocab.afel-project.eu/ont/learning>
 <http://vocab.afel-project.eu/ont/learning/1.0.0>
 
+Annotations: 
+    <http://purl.org/dc/terms/contributor> "Besnik Fetahu",
+    <http://purl.org/dc/terms/contributor> "Peter Holtz",
+    <http://purl.org/dc/terms/creator> "Alessandro Adamou",
+    <http://purl.org/dc/terms/rights> "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0"@en,
+    <http://purl.org/dc/terms/title> "AFEL Learning Ontology: Core module",
+    rdfs:comment "A general-purpose model of learning activities, both academic and informal. This ontology is the basis for the AFEL Learning Ontology Network."@en
+
+AnnotationProperty: <http://purl.org/dc/terms/contributor>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/creator>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/description>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/rights>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
 AnnotationProperty: rdfs:comment
 
     
@@ -120,9 +143,6 @@ ObjectProperty: afel:triggers
     
     
 ObjectProperty: owl:topObjectProperty
-
-    
-DataProperty: <http://purl.org/dc/terms/title>
 
     
 Class: <http://rdfs.org/sioc/ns#Space>
