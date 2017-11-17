@@ -1,4 +1,5 @@
 Prefix: afel: <http://vocab.afel-project.eu/>
+Prefix: cp: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -17,7 +18,8 @@ Annotations:
     <http://purl.org/dc/terms/creator> "Alessandro Adamou",
     <http://purl.org/dc/terms/rights> "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0"@en,
     <http://purl.org/dc/terms/title> "AFEL Learning Ontology: Core module",
-    rdfs:comment "A general-purpose model of learning activities, both academic and informal. This ontology is the basis for the AFEL Learning Ontology Network."@en
+    rdfs:comment "A general-purpose model of learning activities, both academic and informal. This ontology is the basis for the AFEL Learning Ontology Network."@en,
+	cp:hasUnitTest "PREFIX afel: <http://vocab.afel-project.eu/> SELECT ?user WHERE { ?user afel:performsActivity/afel:hasScope [ a afel:LearningScope ] }"^^xsd:string
 
 AnnotationProperty: <http://purl.org/dc/terms/contributor>
 
@@ -32,6 +34,9 @@ AnnotationProperty: <http://purl.org/dc/terms/rights>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/title>
+
+
+AnnotationProperty: cp:hasUnitTest
 
     
 AnnotationProperty: rdfs:comment
